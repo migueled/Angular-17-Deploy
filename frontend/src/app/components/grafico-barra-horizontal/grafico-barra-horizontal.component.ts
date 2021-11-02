@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-grafico-barra-horizontal',
@@ -6,11 +6,38 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class GraficoBarraHorizontalComponent implements OnInit {
+export class GraficoBarraHorizontalComponent {
 
-  constructor() { }
+  results: any[] = [
+    {
+      "name": "Germany",
+      "value": 8940000
+    },
+    {
+      "name": "USA",
+      "value": 5000000
+    },
+    {
+      "name": "France",
+      "value": 7200000
+    }
+  ];
 
-  ngOnInit(): void {
-  }
+  view: any[] = [700, 400];
+
+  // options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  showXAxisLabel = true;
+  xAxisLabel = 'Country';
+  showYAxisLabel = true;
+  yAxisLabel = 'Population';
+
+  colorScheme = 'nightLights';
+
+  constructor() {}
+
 
 }
