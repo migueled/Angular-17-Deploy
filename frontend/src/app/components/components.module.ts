@@ -12,7 +12,8 @@ import { GraficoBarraHorizontalComponent } from './grafico-barra-horizontal/graf
     GraficoBarraHorizontalComponent
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    GraficoBarraHorizontalComponent
   ],
   imports: [
     CommonModule,
