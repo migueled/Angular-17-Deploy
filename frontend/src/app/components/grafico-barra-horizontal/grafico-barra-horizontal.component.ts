@@ -3,32 +3,33 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-grafico-barra-horizontal',
   templateUrl: './grafico-barra-horizontal.component.html',
-  styles: [
-  ]
+  styles: [ '.chart-container { display: grid; height: 300px; }' ]
 })
 export class GraficoBarraHorizontalComponent {
 
   results: any[] = [
     {
-      "name": "Germany",
-      "value": 8940000
+      "name": "Halo",
+      "value": 2378
     },
     {
-      "name": "USA",
-      "value": 5000000
+      "name": "Call of duty",
+      "value": 2979
     },
     {
-      "name": "France",
-      "value": 7200000
+      "name": "GOW 3",
+      "value": 1983
+    },
+    {
+      "name": "Fortnite",
+      "value": 371
     }
   ];
-
-  view: any[] = [700, 400];
 
   // options
   showXAxis = true;
   showYAxis = true;
-  gradient = false;
+  gradient = true;
   showLegend = true;
   showXAxisLabel = true;
   xAxisLabel = 'Country';
@@ -39,5 +40,7 @@ export class GraficoBarraHorizontalComponent {
 
   constructor() {}
 
-
+  onSelect(event:any) {
+    console.log(event);
+  }
 }
