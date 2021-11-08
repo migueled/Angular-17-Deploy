@@ -38,7 +38,16 @@ export class GraficoBarraHorizontalComponent {
 
   colorScheme = 'nightLights';
 
-  constructor() {}
+  constructor() {
+    setInterval( () => {
+      console.log('Prueba')
+      const newResults = [...this.results]
+      for( let i in newResults ) {
+        newResults[i].value = Math.round( Math.random() * 100 )
+      }
+      this.results = [...newResults]
+    }, 1500 )
+  }
 
   onSelect(event:any) {
     console.log(event);
